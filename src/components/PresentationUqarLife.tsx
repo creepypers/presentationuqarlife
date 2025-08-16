@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './PresentationUqarLife.css'
 
 interface PresentationUqarLifeProps {
@@ -6,64 +6,8 @@ interface PresentationUqarLifeProps {
 }
 
 const PresentationUqarLife: React.FC<PresentationUqarLifeProps> = ({ onDiscoverClick }) => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen)
-  }
-
   return (
     <div className="presentation-container">
-      {/* Header Mobile */}
-      <header className="mobile-header">
-        <div className="mobile-header-container">
-          <div className="mobile-logo">
-            <div className="logo-text">UQARLIVE</div>
-          </div>
-          
-          <button 
-            className={`burger-menu ${isMobileMenuOpen ? 'active' : ''}`}
-            onClick={toggleMobileMenu}
-            aria-label="Menu"
-          >
-            <span className="burger-line"></span>
-            <span className="burger-line"></span>
-            <span className="burger-line"></span>
-          </button>
-        </div>
-        
-        <nav className={`mobile-nav ${isMobileMenuOpen ? 'open' : ''}`}>
-          <ul className="mobile-nav-menu">
-            <li className="mobile-nav-item">
-              <a 
-                className="mobile-nav-link"
-                onClick={() => {
-                  onDiscoverClick()
-                  setIsMobileMenuOpen(false)
-                }}
-              >
-                Découvrir l'Application
-              </a>
-            </li>
-            <li className="mobile-nav-item">
-              <a 
-                className="mobile-nav-link"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                À Propos
-              </a>
-            </li>
-            <li className="mobile-nav-item">
-              <a 
-                className="mobile-nav-link"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Contact
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </header>
       {/* Hero Section */}
       <section className="hero-section">
         <div className="hero-content">
