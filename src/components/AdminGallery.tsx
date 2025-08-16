@@ -178,8 +178,7 @@ const AdminGallery = () => {
                   </div>
                 </div>
                 <div className="card-content">
-                  <h3 className="card-title">Image {image.id}</h3>
-                  <p className="card-filename">{image.filename}</p>
+                  <h3 className="card-title">UX {image.id}</h3>
                   <div className="card-meta">
                     <span className="meta-tag">Administration</span>
                     <span className="meta-tag">UQAR</span>
@@ -195,38 +194,20 @@ const AdminGallery = () => {
       {selectedImage && (
         <div className="modern-modal-overlay" onClick={closeModal}>
           <div className="modern-modal" onClick={(e) => e.stopPropagation()}>
+            {/* Bouton de fermeture */}
+            <button className="modal-close" onClick={closeModal}>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </button>
+            
             <div className="modal-body">
               <div className="modal-image-wrapper">
                 <img src={selectedImage.src} alt={selectedImage.alt} />
               </div>
             </div>
-s
-            <div className="modal-footer">
-              <div className="modal-actions">
-                <button className="modal-action-btn" onClick={previousImage}>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                    <path d="M15 18l-6-6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                  Précédente
-                </button>
-                <button className="modal-action-btn">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <polyline points="7,10 12,15 17,10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <line x1="12" y1="15" x2="12" y2="3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                  Télécharger
-                </button>
-                <button className="modal-action-btn" onClick={nextImage}>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                    <path d="M9 18l6-6-6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                  Suivante
-                </button>
-              </div>
-            </div>
 
-            {/* Navigation */}
+            {/* Navigation - juste les icônes */}
             <button className="modal-nav prev" onClick={previousImage}>
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                 <path d="M15 18l-6-6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
