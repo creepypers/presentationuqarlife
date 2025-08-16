@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './PresentationUqarLife.css'
 
 interface PresentationUqarLifeProps {
@@ -6,8 +6,64 @@ interface PresentationUqarLifeProps {
 }
 
 const PresentationUqarLife: React.FC<PresentationUqarLifeProps> = ({ onDiscoverClick }) => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen)
+  }
+
   return (
     <div className="presentation-container">
+      {/* Header Mobile */}
+      <header className="mobile-header">
+        <div className="mobile-header-container">
+          <div className="mobile-logo">
+            <div className="logo-text">UQARLIVE</div>
+          </div>
+          
+          <button 
+            className={`burger-menu ${isMobileMenuOpen ? 'active' : ''}`}
+            onClick={toggleMobileMenu}
+            aria-label="Menu"
+          >
+            <span className="burger-line"></span>
+            <span className="burger-line"></span>
+            <span className="burger-line"></span>
+          </button>
+        </div>
+        
+        <nav className={`mobile-nav ${isMobileMenuOpen ? 'open' : ''}`}>
+          <ul className="mobile-nav-menu">
+            <li className="mobile-nav-item">
+              <a 
+                className="mobile-nav-link"
+                onClick={() => {
+                  onDiscoverClick()
+                  setIsMobileMenuOpen(false)
+                }}
+              >
+                Découvrir l'Application
+              </a>
+            </li>
+            <li className="mobile-nav-item">
+              <a 
+                className="mobile-nav-link"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                À Propos
+              </a>
+            </li>
+            <li className="mobile-nav-item">
+              <a 
+                className="mobile-nav-link"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Contact
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
       {/* Hero Section */}
       <section className="hero-section">
         <div className="hero-content">
@@ -50,6 +106,55 @@ const PresentationUqarLife: React.FC<PresentationUqarLifeProps> = ({ onDiscoverC
                 <li><strong>Optimiser</strong> la gestion des ressources</li>
               </ul>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Design & UX */}
+      <section className="final-cta">
+        <h2 className="section-title">DESIGN & EXPÉRIENCE UTILISATEUR</h2>
+        <div className="design-content">
+          <div className="logo-section">
+            <div className="logo-container">
+              <img 
+                src="https://i.ibb.co/fY1Y82V4/IMG-20250816-034536.png" 
+                alt="Logo UQARLIVE" 
+                className="uqar-logo"
+              />
+            </div>
+          </div>
+          
+          <div className="design-colors">
+            <h3>Identité Visuelle UQAR</h3>
+            <div className="color-palette">
+              <div className="color-item">
+                <div className="color-swatch" style={{backgroundColor: '#005499'}}></div>
+                <span>Bleu principal : #005499</span>
+              </div>
+              <div className="color-item">
+                <div className="color-swatch" style={{backgroundColor: '#00A1E4'}}></div>
+                <span>Bleu accent : #00A1E4</span>
+              </div>
+              <div className="color-item">
+                <div className="color-swatch" style={{backgroundColor: '#F8F9FA'}}></div>
+                <span>Fond clair : #F8F9FA</span>
+              </div>
+              <div className="color-item">
+                <div className="color-swatch" style={{backgroundColor: '#2C2C2C'}}></div>
+                <span>Texte gris foncé : #2C2C2C</span>
+              </div>
+            </div>
+          </div>
+          
+          <div className="design-principles">
+            <h3>Principes de Design</h3>
+            <ul>
+              <li>Style arrondi avec ombres subtiles</li>
+              <li>Responsive et adaptable</li>
+              <li>Accessible et contrasté</li>
+              <li>Intuitif et clair</li>
+              <li>Moderne et attractif</li>
+            </ul>
           </div>
         </div>
       </section>
@@ -384,45 +489,6 @@ const PresentationUqarLife: React.FC<PresentationUqarLifeProps> = ({ onDiscoverC
               <li>Notifications pour changements importants</li>
               <li>Données environnementales du campus</li>
               <li>Interface intuitive et responsive</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* Design & UX */}
-      <section className="final-cta">
-        <h2 className="section-title">DESIGN & EXPÉRIENCE UTILISATEUR</h2>
-        <div className="design-content">
-          <div className="design-colors">
-            <h3>Identité Visuelle UQAR</h3>
-            <div className="color-palette">
-              <div className="color-item">
-                <div className="color-swatch" style={{backgroundColor: '#005499'}}></div>
-                <span>Bleu principal : #005499</span>
-              </div>
-              <div className="color-item">
-                <div className="color-swatch" style={{backgroundColor: '#00A1E4'}}></div>
-                <span>Bleu accent : #00A1E4</span>
-              </div>
-              <div className="color-item">
-                <div className="color-swatch" style={{backgroundColor: '#F8F9FA'}}></div>
-                <span>Fond clair : #F8F9FA</span>
-              </div>
-              <div className="color-item">
-                <div className="color-swatch" style={{backgroundColor: '#2C2C2C'}}></div>
-                <span>Texte gris foncé : #2C2C2C</span>
-              </div>
-            </div>
-          </div>
-          
-          <div className="design-principles">
-            <h3>Principes de Design</h3>
-            <ul>
-              <li>Style arrondi avec ombres subtiles</li>
-              <li>Responsive et adaptable</li>
-              <li>Accessible et contrasté</li>
-              <li>Intuitif et clair</li>
-              <li>Moderne et attractif</li>
             </ul>
           </div>
         </div>

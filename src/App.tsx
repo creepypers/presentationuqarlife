@@ -6,20 +6,6 @@ import PresentationUqarLife from './components/PresentationUqarLife'
 
 function App() {
   const [activeTab, setActiveTab] = useState<'admin' | 'users' | 'presentation'>('presentation')
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen)
-  }
-
-  const closeMobileMenu = () => {
-    setIsMobileMenuOpen(false)
-  }
-
-  const handleTabClick = (tab: 'admin' | 'users' | 'presentation') => {
-    setActiveTab(tab)
-    closeMobileMenu()
-  }
 
   return (
     <div className="app">
@@ -32,24 +18,13 @@ function App() {
             </a>
           </div>
 
-          {/* Burger Menu Button */}
-          <button 
-            className={`mobile-menu-toggle ${isMobileMenuOpen ? 'active' : ''}`}
-            onClick={toggleMobileMenu}
-            aria-label="Toggle mobile menu"
-          >
-            <span className="burger-line"></span>
-            <span className="burger-line"></span>
-            <span className="burger-line"></span>
-          </button>
-
           {/* Navigation Menu */}
-          <nav className={`header-nav ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
+          <nav className="header-nav">
             <ul className="nav-menu">
               <li className="nav-item">
                 <a 
                   className={`nav-link ${activeTab === 'presentation' ? 'active' : ''}`}
-                  onClick={() => handleTabClick('presentation')}
+                  onClick={() => setActiveTab('presentation')}
                 >
                   Home
                 </a>
@@ -57,7 +32,7 @@ function App() {
               <li className="nav-item">
                 <a 
                   className={`nav-link ${activeTab === 'admin' ? 'active' : ''}`}
-                  onClick={() => handleTabClick('admin')}
+                  onClick={() => setActiveTab('admin')}
                 >
                   Administration
                 </a>
@@ -65,7 +40,7 @@ function App() {
               <li className="nav-item">
                 <a 
                   className={`nav-link ${activeTab === 'users' ? 'active' : ''}`}
-                  onClick={() => handleTabClick('users')}
+                  onClick={() => setActiveTab('users')}
                 >
                   Utilisateurs
                 </a>
@@ -76,7 +51,7 @@ function App() {
       </header>
       
       <main>
-        {activeTab === 'presentation' ? <PresentationUqarLife onDiscoverClick={() => handleTabClick('admin')} /> : 
+        {activeTab === 'presentation' ? <PresentationUqarLife onDiscoverClick={() => setActiveTab('admin')} /> : 
          activeTab === 'admin' ? <AdminGallery /> : <UserGallery />}
       </main>
     </div>
