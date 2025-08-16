@@ -16,67 +16,67 @@ const AdminGallery = () => {
   const adminImages: AdminImage[] = [
     {
       id: '7',
-      src: '/admin/WhatsApp Image 2025-08-16 at 00.52.40_d8e1ecb3.jpg',
+      src: 'https://i.ibb.co/qFcHT1Dm/Whats-App-Image-2025-08-16-at-00-52-40-d8e1ecb3.jpg',
       alt: 'Image d\'administration 7',
       filename: 'WhatsApp Image 2025-08-16 at 00.52.40_d8e1ecb3.jpg'
     },
     {
       id: '8',
-      src: '/admin/WhatsApp Image 2025-08-16 at 00.52.40_de6518cf.jpg',
+      src: 'https://i.ibb.co/b0Q1ZB8/Whats-App-Image-2025-08-16-at-00-52-40-de6518cf.jpg',
       alt: 'Image d\'administration 8',
       filename: 'WhatsApp Image 2025-08-16 at 00.52.40_de6518cf.jpg'
     },
     {
       id: '9',
-      src: '/admin/WhatsApp Image 2025-08-16 at 00.52.41_724a286c.jpg',
+      src: 'https://i.ibb.co/j9hRP2YS/Whats-App-Image-2025-08-16-at-00-52-41-724a286c.jpg',
       alt: 'Image d\'administration 9',
       filename: 'WhatsApp Image 2025-08-16 at 00.52.41_724a286c.jpg'
     },
     {
       id: '1',
-      src: '/admin/WhatsApp Image 2025-08-16 at 00.52.40_1f598a57.jpg',
+      src: 'https://i.ibb.co/Hp9CFNdP/Whats-App-Image-2025-08-16-at-00-52-40-1f598a57.jpg',
       alt: 'Image d\'administration 1',
       filename: 'WhatsApp Image 2025-08-16 at 00.52.40_1f598a57.jpg'
     },
     {
       id: '2',
-      src: '/admin/WhatsApp Image 2025-08-16 at 00.52.40_274f721d.jpg',
+      src: 'https://i.ibb.co/ch6hsVvg/Whats-App-Image-2025-08-16-at-00-52-40-274f721d.jpg',
       alt: 'Image d\'administration 2',
       filename: 'WhatsApp Image 2025-08-16 at 00.52.40_274f721d.jpg'
     },
     {
       id: '11',
-      src: '/admin/WhatsApp Image 2025-08-16 at 00.52.41_fa66dcc2.jpg',
+      src: 'https://i.ibb.co/zVhFf7V1/Whats-App-Image-2025-08-16-at-00-52-41-fa66dcc2.jpg',
       alt: 'Image d\'administration 11',
       filename: 'WhatsApp Image 2025-08-16 at 00.52.41_fa66dcc2.jpg'
     },
     {
       id: '5',
-      src: '/admin/WhatsApp Image 2025-08-16 at 00.52.40_8aa9ec94.jpg',
+      src: 'https://i.ibb.co/Qv2X0ZBY/Whats-App-Image-2025-08-16-at-00-52-40-8aa9ec94.jpg',
       alt: 'Image d\'administration 5',
       filename: 'WhatsApp Image 2025-08-16 at 00.52.40_8aa9ec94.jpg'
     },
     {
       id: '10',
-      src: '/admin/WhatsApp Image 2025-08-16 at 00.52.41_c41294ff.jpg',
+      src: 'https://i.ibb.co/ZRFb85DX/Whats-App-Image-2025-08-16-at-00-52-41-c41294ff.jpg',
       alt: 'Image d\'administration 10',
       filename: 'WhatsApp Image 2025-08-16 at 00.52.41_c41294ff.jpg'
     },
     {
       id: '3',
-      src: '/admin/WhatsApp Image 2025-08-16 at 00.52.40_5d5493b9.jpg',
+      src: 'https://i.ibb.co/h1wdZt6B/Whats-App-Image-2025-08-16-at-00-52-40-5d5493b9.jpg',
       alt: 'Image d\'administration 3',
       filename: 'WhatsApp Image 2025-08-16 at 00.52.40_5d5493b9.jpg'
     },
     {
       id: '4',
-      src: '/admin/WhatsApp Image 2025-08-16 at 00.52.40_881e2fa7.jpg',
+      src: 'https://i.ibb.co/GQ1G7Cyp/Whats-App-Image-2025-08-16-at-00-52-40-881e2fa7.jpg',
       alt: 'Image d\'administration 4',
       filename: 'WhatsApp Image 2025-08-16 at 00.52.40_881e2fa7.jpg'
     },
     {
       id: '6',
-      src: '/admin/WhatsApp Image 2025-08-16 at 00.52.40_b91e6186.jpg',
+      src: 'https://i.ibb.co/yB0J8vQJ/Whats-App-Image-2025-08-16-at-00-52-40-b91e6186.jpg',
       alt: 'Image d\'administration 6',
       filename: 'WhatsApp Image 2025-08-16 at 00.52.40_b91e6186.jpg'
     }
