@@ -15,70 +15,70 @@ const AdminGallery = () => {
 
   const adminImages: AdminImage[] = [
     {
-      id: '7',
+      id: '1',
       src: 'https://i.ibb.co/qFcHT1Dm/Whats-App-Image-2025-08-16-at-00-52-40-d8e1ecb3.jpg',
-      alt: 'Image d\'administration 7',
+      alt: 'Image d\'administration 1',
       filename: 'WhatsApp Image 2025-08-16 at 00.52.40_d8e1ecb3.jpg'
     },
     {
-      id: '8',
+      id: '2',
       src: 'https://i.ibb.co/b0Q1ZB8/Whats-App-Image-2025-08-16-at-00-52-40-de6518cf.jpg',
-      alt: 'Image d\'administration 8',
+      alt: 'Image d\'administration 2',
       filename: 'WhatsApp Image 2025-08-16 at 00.52.40_de6518cf.jpg'
     },
     {
-      id: '9',
-      src: 'https://i.ibb.co/j9hRP2YS/Whats-App-Image-2025-08-16-at-00-52-41-724a286c.jpg',
-      alt: 'Image d\'administration 9',
+      id: '3',
+      src: 'https://i.ibb.co/j9hRP2YS/Whats-App-Image-2025-08-16-at-00-52-41_724a286c.jpg',
+      alt: 'Image d\'administration 3',
       filename: 'WhatsApp Image 2025-08-16 at 00.52.41_724a286c.jpg'
     },
     {
-      id: '1',
+      id: '4',
       src: 'https://i.ibb.co/Hp9CFNdP/Whats-App-Image-2025-08-16-at-00-52-40-1f598a57.jpg',
-      alt: 'Image d\'administration 1',
+      alt: 'Image d\'administration 4',
       filename: 'WhatsApp Image 2025-08-16 at 00.52.40_1f598a57.jpg'
     },
     {
-      id: '2',
+      id: '5',
       src: 'https://i.ibb.co/ch6hsVvg/Whats-App-Image-2025-08-16-at-00-52-40-274f721d.jpg',
-      alt: 'Image d\'administration 2',
+      alt: 'Image d\'administration 5',
       filename: 'WhatsApp Image 2025-08-16 at 00.52.40_274f721d.jpg'
     },
     {
-      id: '11',
+      id: '6',
       src: 'https://i.ibb.co/zVhFf7V1/Whats-App-Image-2025-08-16-at-00-52-41-fa66dcc2.jpg',
-      alt: 'Image d\'administration 11',
+      alt: 'Image d\'administration 6',
       filename: 'WhatsApp Image 2025-08-16 at 00.52.41_fa66dcc2.jpg'
     },
     {
-      id: '5',
+      id: '7',
       src: 'https://i.ibb.co/Qv2X0ZBY/Whats-App-Image-2025-08-16-at-00-52-40-8aa9ec94.jpg',
-      alt: 'Image d\'administration 5',
+      alt: 'Image d\'administration 7',
       filename: 'WhatsApp Image 2025-08-16 at 00.52.40_8aa9ec94.jpg'
     },
     {
-      id: '10',
+      id: '8',
       src: 'https://i.ibb.co/ZRFb85DX/Whats-App-Image-2025-08-16-at-00-52-41-c41294ff.jpg',
-      alt: 'Image d\'administration 10',
+      alt: 'Image d\'administration 8',
       filename: 'WhatsApp Image 2025-08-16 at 00.52.41_c41294ff.jpg'
     },
     {
-      id: '3',
+      id: '9',
       src: 'https://i.ibb.co/h1wdZt6B/Whats-App-Image-2025-08-16-at-00-52-40-5d5493b9.jpg',
-      alt: 'Image d\'administration 3',
+      alt: 'Image d\'administration 9',
       filename: 'WhatsApp Image 2025-08-16 at 00.52.40_5d5493b9.jpg'
     },
     {
-      id: '4',
+      id: '10',
       src: 'https://i.ibb.co/GQ1G7Cyp/Whats-App-Image-2025-08-16-at-00-52-40-881e2fa7.jpg',
-      alt: 'Image d\'administration 4',
+      alt: 'Image d\'administration 10',
       filename: 'WhatsApp Image 2025-08-16 at 00.52.40_881e2fa7.jpg'
     },
     {
-      id: '6',
+      id: '11',
       src: 'https://i.ibb.co/yB0J8vQJ/Whats-App-Image-2025-08-16-at-00-52-40-b91e6186.jpg',
-      alt: 'Image d\'administration 6',
-      filename: 'WhatsApp Image 2025-08-16 at 00.52.40_b91e6186.jpg'
+      alt: 'Image d\'administration 11',
+      filename: 'WhatsApp Image 2025-08-16 at 00-52-40_b91e6186.jpg'
     }
   ]
 
@@ -195,24 +195,12 @@ const AdminGallery = () => {
       {selectedImage && (
         <div className="modern-modal-overlay" onClick={closeModal}>
           <div className="modern-modal" onClick={(e) => e.stopPropagation()}>
-            <div className="modal-header">
-              <div className="modal-title">
-                <h2>{selectedImage.filename}</h2>
-                <p>Image {currentImageIndex + 1} sur {adminImages.length}</p>
-              </div>
-              <button className="modal-close" onClick={closeModal}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                  <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </button>
-            </div>
-            
             <div className="modal-body">
               <div className="modal-image-wrapper">
                 <img src={selectedImage.src} alt={selectedImage.alt} />
               </div>
             </div>
-
+s
             <div className="modal-footer">
               <div className="modal-actions">
                 <button className="modal-action-btn" onClick={previousImage}>
