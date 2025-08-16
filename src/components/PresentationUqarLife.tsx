@@ -14,10 +14,10 @@ const PresentationUqarLife: React.FC<PresentationUqarLifeProps> = ({ onDiscoverC
           <h1 className="hero-title">UQARLIVE</h1>
           <p className="hero-tagline">Application Mobile de Vie Étudiante</p>
           <p className="hero-description">
-            Présentation Complète et Unifiée du Projet
+            Présentation Complète et Unifiée du Projet scrollez apres "DÉCOUVRIR L'UI" pour voir la presentation
           </p>
           <div className="hero-cta">
-            <button className="cta-button" onClick={onDiscoverClick}>DÉCOUVRIR</button>
+            <button className="cta-button" onClick={onDiscoverClick}>DÉCOUVRIR L'UI</button>
           </div>
         </div>
       </section>
