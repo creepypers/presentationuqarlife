@@ -1,84 +1,138 @@
 import React, { useState, useEffect } from 'react'
-import './AdminGallery.css'
+import './UserGallery.css'
 
-interface AdminImage {
+interface UserImage {
   id: string
   src: string
   alt: string
   filename: string
 }
 
-const AdminGallery: React.FC = () => {
-  const [selectedImage, setSelectedImage] = useState<AdminImage | null>(null)
+const UserGallery: React.FC = () => {
+  const [selectedImage, setSelectedImage] = useState<UserImage | null>(null)
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const [isLoading, setIsLoading] = useState(true)
 
-  const adminImages: AdminImage[] = [
+  const userImages: UserImage[] = [
     {
       id: '1',
-      src: 'https://i.ibb.co/qFcHT1Dm/Whats-App-Image-2025-08-16-at-00-52-40-d8e1ecb3.jpg',
-      alt: 'Image d\'administration 1',
-      filename: 'WhatsApp Image 2025-08-16 at 00.52.40_d8e1ecb3.jpg'
+      src: 'https://i.ibb.co/KzXCkfmd/1.jpg',
+      alt: 'Image utilisateur 1',
+      filename: '1.jpg'
     },
     {
       id: '2',
-      src: 'https://i.ibb.co/b0Q1ZB8/Whats-App-Image-2025-08-16-at-00-52-40-de6518cf.jpg',
-      alt: 'Image d\'administration 2',
-      filename: 'WhatsApp Image 2025-08-16 at 00.52.40_de6518cf.jpg'
+      src: 'https://i.ibb.co/bjbrkDwJ/2.jpg',
+      alt: 'Image utilisateur 2',
+      filename: '2.jpg'
     },
     {
       id: '3',
-      src: 'https://i.ibb.co/j9hRP2YS/Whats-App-Image-2025-08-16-at-00-52-41-724a286c.jpg',
-      alt: 'Image d\'administration 3',
-      filename: 'WhatsApp Image 2025-08-16 at 00.52.41_724a286c.jpg'
+      src: 'https://i.ibb.co/zhwB0hQS/3.jpg',
+      alt: 'Image utilisateur 3',
+      filename: '3.jpg'
     },
     {
       id: '4',
-      src: 'https://i.ibb.co/Hp9CFNdP/Whats-App-Image-2025-08-16-at-00-52-40-1f598a57.jpg',
-      alt: 'Image d\'administration 4',
-      filename: 'WhatsApp Image 2025-08-16 at 00.52.40_1f598a57.jpg'
+      src: 'https://i.ibb.co/dJJjc48g/4.jpg',
+      alt: 'Image utilisateur 4',
+      filename: '4.jpg'
     },
     {
       id: '5',
-      src: 'https://i.ibb.co/ch6hsVvg/Whats-App-Image-2025-08-16-at-00-52-40-274f721d.jpg',
-      alt: 'Image d\'administration 5',
-      filename: 'WhatsApp Image 2025-08-16 at 00.52.40_274f721d.jpg'
+      src: 'https://i.ibb.co/wFVBB4Pj/5.jpg',
+      alt: 'Image utilisateur 5',
+      filename: '5.jpg'
     },
     {
       id: '6',
-      src: 'https://i.ibb.co/zVhFf7V1/Whats-App-Image-2025-08-16-at-00-52-41-fa66dcc2.jpg',
-      alt: 'Image d\'administration 6',
-      filename: 'WhatsApp Image 2025-08-16 at 00.52.41_fa66dcc2.jpg'
+      src: 'https://i.ibb.co/3m2Z7jkt/6.jpg',
+      alt: 'Image utilisateur 6',
+      filename: '6.jpg'
     },
     {
       id: '7',
-      src: 'https://i.ibb.co/Qv2X0ZBY/Whats-App-Image-2025-08-16-at-00-52-40-8aa9ec94.jpg',
-      alt: 'Image d\'administration 7',
-      filename: 'WhatsApp Image 2025-08-16 at 00.52.40_8aa9ec94.jpg'
+      src: 'https://i.ibb.co/RkR6rcq7/7.jpg',
+      alt: 'Image utilisateur 7',
+      filename: '7.jpg'
     },
     {
       id: '8',
-      src: 'https://i.ibb.co/ZRFb85DX/Whats-App-Image-2025-08-16-at-00-52-41-c41294ff.jpg',
-      alt: 'Image d\'administration 8',
-      filename: 'WhatsApp Image 2025-08-16 at 00.52.41_c41294ff.jpg'
+      src: 'https://i.ibb.co/5hZWRgNg/8.jpg',
+      alt: 'Image utilisateur 8',
+      filename: '8.jpg'
     },
     {
       id: '9',
-      src: 'https://i.ibb.co/h1wdZt6B/Whats-App-Image-2025-08-16-at-00-52-40-5d5493b9.jpg',
-      alt: 'Image d\'administration 9',
-      filename: 'WhatsApp Image 2025-08-16 at 00.52.40_5d5493b9.jpg'
+      src: 'https://i.ibb.co/chbcNMKG/9.jpg',
+      alt: 'Image utilisateur 9',
+      filename: '9.jpg'
     },
     {
       id: '10',
-      src: 'https://i.ibb.co/GQ1G7Cyp/Whats-App-Image-2025-08-16-at-00-52-40-881e2fa7.jpg',
-      alt: 'Image d\'administration 10',
-      filename: 'WhatsApp Image 2025-08-16 at 00.52.40_881e2fa7.jpg'
+      src: 'https://i.ibb.co/LhbJbjP0/10.jpg',
+      alt: 'Image utilisateur 10',
+      filename: '10.jpg'
     },
     {
       id: '11',
-      src: 'https://i.ibb.co/yB0J8vQJ/Whats-App-Image-2025-08-16-at-00-52-40-b91e6186.jpg',
-      alt: 'Image d\'administration 11',
-      filename: 'WhatsApp Image 2025-08-16 at 00.52.40_b91e6186.jpg'
+      src: 'https://i.ibb.co/JWtQq56n/11.jpg',
+      alt: 'Image utilisateur 11',
+      filename: '11.jpg'
+    },
+    {
+      id: '12',
+      src: 'https://i.ibb.co/spfNrvdw/12.jpg',
+      alt: 'Image utilisateur 12',
+      filename: '12.jpg'
+    },
+    {
+      id: '13',
+      src: 'https://i.ibb.co/whzxTnjm/13.jpg',
+      alt: 'Image utilisateur 13',
+      filename: '13.jpg'
+    },
+    {
+      id: '14',
+      src: 'https://i.ibb.co/yBsqfKbt/14.jpg',
+      alt: 'Image utilisateur 14',
+      filename: '14.jpg'
+    },
+    {
+      id: '15',
+      src: 'https://i.ibb.co/VWcKNg0b/15.jpg',
+      alt: 'Image utilisateur 15',
+      filename: '15.jpg'
+    },
+    {
+      id: '16',
+      src: 'https://i.ibb.co/mCfdgSpK/16.jpg',
+      alt: 'Image utilisateur 16',
+      filename: '16.jpg'
+    },
+    {
+      id: '17',
+      src: 'https://i.ibb.co/ycYXY7v7/17.jpg',
+      alt: 'Image utilisateur 17',
+      filename: '17.jpg'
+    },
+    {
+      id: '18',
+      src: 'https://i.ibb.co/vxKym6Jt/18.jpg',
+      alt: 'Image utilisateur 18',
+      filename: '18.jpg'
+    },
+    {
+      id: '19',
+      src: 'https://i.ibb.co/d4R6XbPC/19.jpg',
+      alt: 'Image utilisateur 19',
+      filename: '19.jpg'
+    },
+    {
+      id: '20',
+      src: 'https://i.ibb.co/VW975yrr/20.jpg',
+      alt: 'Image utilisateur 20',
+      filename: '20.jpg'
     }
   ]
 
@@ -89,8 +143,8 @@ const AdminGallery: React.FC = () => {
     return () => clearTimeout(timer)
   }, [])
 
-  const openModal = (image: AdminImage) => {
-    const index = adminImages.findIndex(img => img.id === image.id)
+  const openModal = (image: UserImage) => {
+    const index = userImages.findIndex(img => img.id === image.id)
     setCurrentImageIndex(index)
     setSelectedImage(image)
   }
@@ -100,15 +154,15 @@ const AdminGallery: React.FC = () => {
   }
 
   const goToPrevious = () => {
-    const newIndex = currentImageIndex === 0 ? adminImages.length - 1 : currentImageIndex - 1
+    const newIndex = currentImageIndex === 0 ? userImages.length - 1 : currentImageIndex - 1
     setCurrentImageIndex(newIndex)
-    setSelectedImage(adminImages[newIndex])
+    setSelectedImage(userImages[newIndex])
   }
 
   const goToNext = () => {
-    const newIndex = currentImageIndex === adminImages.length - 1 ? 0 : currentImageIndex + 1
+    const newIndex = currentImageIndex === userImages.length - 1 ? 0 : currentImageIndex + 1
     setCurrentImageIndex(newIndex)
-    setSelectedImage(adminImages[newIndex])
+    setSelectedImage(userImages[newIndex])
   }
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
@@ -122,23 +176,23 @@ const AdminGallery: React.FC = () => {
       <div className="gallery-loading">
         <div className="loading-content">
           <h2>CHARGEMENT</h2>
-          <p>Préparation de la galerie administrative...</p>
+          <p>Préparation de la galerie utilisateurs...</p>
         </div>
       </div>
     )
   }
 
   return (
-    <div className="admin-gallery">
+    <div className="user-gallery">
       {/* Hero Section */}
       <section className="gallery-hero">
         <div className="hero-content">
-          <h1 className="hero-title">GALERIE ADMINISTRATIVE</h1>
-          <p className="hero-subtitle">Images de gestion et d'administration UQAR</p>
+          <h1 className="hero-title">GALERIE UTILISATEURS</h1>
+          <p className="hero-subtitle">Images d'expérience utilisateur et d'interface</p>
           <div className="hero-stats">
-            <span className="stat">{adminImages.length} IMAGES</span>
-            <span className="stat">ADMINISTRATION</span>
-            <span className="stat">UQAR</span>
+            <span className="stat">{userImages.length} IMAGES</span>
+            <span className="stat">UTILISATEURS</span>
+            <span className="stat">UX/UI</span>
           </div>
         </div>
       </section>
@@ -146,13 +200,13 @@ const AdminGallery: React.FC = () => {
       {/* Gallery Grid */}
       <section className="gallery-section">
         <div className="gallery-grid">
-          {adminImages.map((image) => (
+          {userImages.map((image) => (
             <div key={image.id} className="gallery-item" onClick={() => openModal(image)}>
               <div className="image-container">
                 <img src={image.src} alt={image.alt} loading="lazy" />
                 <div className="image-overlay">
                   <div className="overlay-content">
-                    <h3>ADMIN {image.id}</h3>
+                    <h3>UX {image.id}</h3>
                     <p>Clique pour voir</p>
                   </div>
                 </div>
@@ -197,4 +251,4 @@ const AdminGallery: React.FC = () => {
   )
 }
 
-export default AdminGallery
+export default UserGallery
