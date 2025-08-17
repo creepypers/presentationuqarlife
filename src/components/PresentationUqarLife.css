@@ -66,6 +66,11 @@
 
 .hero-cta {
   margin-top: 40px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .cta-button {
@@ -88,6 +93,41 @@
   color: #fff;
   transform: translateY(-3px);
   box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+}
+
+.demo-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 25px;
+  background: transparent;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border: 2px solid #fff;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.demo-link:hover {
+  background: #fff;
+  color: #000;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+}
+
+.demo-link svg {
+  width: 20px;
+  height: 20px;
+  transition: all 0.3s ease;
+}
+
+.demo-link:hover svg {
+  transform: scale(1.1);
 }
 
 /* Vue d'Ensemble Section */
