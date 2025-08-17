@@ -143,15 +143,12 @@ const PresentationUqarLife: React.FC<PresentationUqarLifeProps> = ({ onDiscoverC
             <ul>
               <li>Application unifiée regroupant tous les services</li>
               <li>Interface intuitive accessible à tous</li>
-              <li>Système de notifications en temps réel</li>
               <li>Gestion centralisée des ressources</li>
               <li>Communication fluide entre utilisateurs</li>
             </ul>
             
             <h4>Bénéfices Attendus</h4>
             <ul>
-              <li><strong>Gain de temps</strong> : -40% sur les processus</li>
-              <li><strong>Satisfaction</strong> : +85% d'amélioration</li>
               <li><strong>Efficacité</strong> : Centralisation des ressources</li>
               <li><strong>Modernisation</strong> : Expérience numérique</li>
             </ul>
@@ -286,7 +283,6 @@ const PresentationUqarLife: React.FC<PresentationUqarLifeProps> = ({ onDiscoverC
               <li>Interface unifiée</li>
               <li>Fonctionnalités avancées et intuitives</li>
               <li>Gestion des rôles et permissions</li>
-              <li>Notifications intelligentes</li>
             </ul>
           </div>
         </div>
@@ -348,7 +344,6 @@ const PresentationUqarLife: React.FC<PresentationUqarLifeProps> = ({ onDiscoverC
             <ul>
               <li>Création et modification des menus</li>
               <li>Gestion des horaires</li>
-              <li>Statistiques de consommation</li>
               <li>Modération du contenu</li>
             </ul>
           </div>
@@ -361,7 +356,6 @@ const PresentationUqarLife: React.FC<PresentationUqarLifeProps> = ({ onDiscoverC
               <li>Réservation en temps réel</li>
               <li>Gestion des créneaux</li>
               <li>Historique des réservations</li>
-              <li>Notifications</li>
             </ul>
             <h4>Avantages</h4>
             <ul>
@@ -378,13 +372,11 @@ const PresentationUqarLife: React.FC<PresentationUqarLifeProps> = ({ onDiscoverC
             <ul>
               <li>Conversations privées</li>
               <li>Gestion des contacts</li>
-              <li>Notifications push</li>
               <li>Interface intuitive</li>
               <li>Sécurité renforcée</li>
             </ul>
             <h4>Sécurité</h4>
             <ul>
-              <li>Chiffrement des messages</li>
               <li>Gestion des permissions</li>
               <li>Modération automatique</li>
               <li>Historique sécurisé</li>
@@ -398,7 +390,6 @@ const PresentationUqarLife: React.FC<PresentationUqarLifeProps> = ({ onDiscoverC
               <li>Création et planification d'événements</li>
               <li>Calendrier interactif</li>
               <li>Inscriptions et gestion des participants</li>
-              <li>Notifications automatiques</li>
               <li>Partage sur réseaux sociaux</li>
             </ul>
             <h4>Fonctionnalités Avancées</h4>
@@ -416,7 +407,6 @@ const PresentationUqarLife: React.FC<PresentationUqarLifeProps> = ({ onDiscoverC
             <ul>
               <li>Fil d'actualités en temps réel</li>
               <li>Catégorisation par thèmes</li>
-              <li>Notifications push pour informations importantes</li>
               <li>Archivage et recherche</li>
               <li>Partage et commentaires</li>
             </ul>
@@ -431,19 +421,18 @@ const PresentationUqarLife: React.FC<PresentationUqarLifeProps> = ({ onDiscoverC
 
           <div className="module-detail">
             <h3>TEMPÉRATURE</h3>
-            <h4>Météo et Conditions Locales</h4>
+            <h4>Affichage Météo Local</h4>
             <ul>
-              <li>Météo en temps réel pour le campus</li>
-              <li>Prévisions à 7 jours</li>
-              <li>Alertes météorologiques</li>
-              <li>Conditions pour activités extérieures</li>
-              <li>Historique des conditions</li>
+              <li>Température actuelle à Rimouski</li>
+              <li>Température actuelle à Lévis</li>
+              <li>Conditions météorologiques de base</li>
+              <li>Interface simple et claire</li>
+              <li>Mise à jour en temps réel</li>
             </ul>
-            <h4>Intégration Intelligente</h4>
+            <h4>Fonctionnalités</h4>
             <ul>
-              <li>Recommandations d'activités selon la météo</li>
-              <li>Notifications pour changements importants</li>
-              <li>Données environnementales du campus</li>
+              <li>Affichage des deux campus UQAR</li>
+              <li>Données météo essentielles</li>
               <li>Interface intuitive et responsive</li>
             </ul>
           </div>
@@ -589,14 +578,6 @@ const PresentationUqarLife: React.FC<PresentationUqarLifeProps> = ({ onDiscoverC
             <div className="stat-item">
               <span className="stat-number">4</span>
               <span className="stat-label">Couches Architecture</span>
-            </div>
-            <div className="stat-item">
-              <span className="stat-number">-40%</span>
-              <span className="stat-label">Gain de Temps</span>
-            </div>
-            <div className="stat-item">
-              <span className="stat-number">+85%</span>
-              <span className="stat-label">Satisfaction</span>
             </div>
           </div>
         </div>
